@@ -1,5 +1,5 @@
 {
-  "name": "dumi-theme-lobehub",
+  "name": "@itic-sci/dumi-theme-lobehub",
   "version": "1.10.10",
   "description": "dumi-theme-lobehub is a documentation site theme package designed for dumi2. It provides a more beautiful and user-friendly development and reading experience based on @lobehub/ui",
   "keywords": [
@@ -24,50 +24,6 @@
   "files": [
     "dist"
   ],
-  "workspaces": [
-    "example/*",
-    "./*"
-  ],
-  "scripts": {
-    "build": "father build",
-    "ci": "npm run lint && npm run type-check",
-    "dev": "concurrently -n dumi,example -c blue,yellow \"father dev\" \"npm run docs:dev\"",
-    "docs:build": "cd example && npm run build",
-    "docs:dev": "cd example && npm run dev",
-    "doctor": "father doctor",
-    "lint": "eslint \"{src,example}/**/*.{js,jsx,ts,tsx}\" --fix",
-    "lint:md": "remark . --quiet --frail --output",
-    "lint:style": "stylelint \"{src,example}/**/*.{js,jsx,ts,tsx}\" --fix",
-    "prepack": "npm run build && clean-pkg-json",
-    "prepare": "husky && father link-dev-theme",
-    "prepublishOnly": "npm run build",
-    "prettier": "prettier -c --write --no-error-on-unmatched-pattern \"**/**\"",
-    "release": "semantic-release",
-    "start": "npm run docs:dev",
-    "test": "vitest --passWithNoTests",
-    "test:coverage": "vitest run --coverage  --passWithNoTests",
-    "test:update": "vitest -u",
-    "type-check": "tsc -p tsconfig-check.json"
-  },
-  "lint-staged": {
-    "*.md": [
-      "remark --quiet --output --",
-      "prettier --write --no-error-on-unmatched-pattern"
-    ],
-    "*.json": [
-      "prettier --write --no-error-on-unmatched-pattern"
-    ],
-    "*.{js,jsx}": [
-      "prettier --write",
-      "stylelint --fix",
-      "eslint --fix"
-    ],
-    "*.{ts,tsx}": [
-      "prettier --parser=typescript --write",
-      "stylelint --fix",
-      "eslint --fix"
-    ]
-  },
   "dependencies": {
     "@floating-ui/react": "^0.26.28",
     "ahooks": "^3.8.1",
