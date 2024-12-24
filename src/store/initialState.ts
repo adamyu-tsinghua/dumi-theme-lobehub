@@ -48,16 +48,13 @@ export const initialThemeConfig: Partial<SiteThemeConfig> = {
   footer: 'Made with 🤯 by <a href="https://lobehub.com" target="_blank">LobeHub</a>',
   metadata: {
     icons: {
-      apple: 'https://lobehub.com/apple-touch-icon.png',
-      icon: 'https://lobehub.com/favicon-32x32.png',
-      shortcut: 'https://lobehub.com/favicon.ico',
+      apple: 'https://itic-sci.com/favicon.ico',
+      icon: 'https://itic-sci.com/favicon.ico',
+      shortcut: 'https://itic-sci.com/favicon.ico',
     },
     openGraph: {
-      siteName: 'LobeHub',
-    },
-    twitter: {
-      site: '@lobehub',
-    },
+      siteName: 'ITICUI',
+    }
   },
 };
 
